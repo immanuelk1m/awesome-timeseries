@@ -78,6 +78,7 @@
 | Orion | 비지도 학습 기반 시계열 이상 탐지용 머신러닝 파이프라인 라이브러리 | [sintel-dev/Orion](https://github.com/sintel-dev/Orion) |
 | Alibi Detect | 시계열·이미지·텍스트 등 다양한 데이터에서 이상치·드리프트·적대적 예제 탐지 라이브러리 | [SeldonIO/alibi-detect](https://github.com/SeldonIO/alibi-detect) |
 | River | 스트리밍 데이터 온라인 학습용 머신러닝 라이브러리로 Concept Drift 대응 가능 | [online-ml/river](https://github.com/online-ml/river) |
+| Darts | 통계 모델과 딥러닝 방법을 scikit-learn 스타일 통합 인터페이스로 제공하는 시계열 예측·이상 탐지 라이브러리 | [unit8co/darts](https://github.com/unit8co/darts) |
 
 ## Community
 
