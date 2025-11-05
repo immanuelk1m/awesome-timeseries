@@ -57,6 +57,7 @@
 | Time-Series-Library (TSLib) | 예측·대체·분류·이상탐지 등 5대 작업 재현성 있게 지원하는 실험 프레임워크 | [GitHub](https://github.com/thuml/Time-Series-Library) |
 | Machine Learning Systems (Harvard) | 하버드대가 무료로 공개한 머신러닝 시스템 설계·운영 교재 | [Book](https://www.mlsysbook.ai/) |
 | O'Reilly Learning Platform | EDU 계정 있으면 다양한 머신러닝·데이터 과학 전자책 무료로 열람 가능 | [Learning Portal](https://learning.oreilly.com/home/) |
+| awesome-industrial-anomaly-detection | 산업 현장 이상탐지 관련 논문·데이터셋·방법론 모은 큐레이션 | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
 
 ## 유틸리티
 
