@@ -5,7 +5,8 @@
 `awesome-time-series` 레포 정리 스타일 참고해 큐레이션 재구성. 요청 따라 **모델 / 에이전트 / 학습자료 / 리더보드** 체계 사용.
 
 ## Contents
-- [Models](#models) 목록
+- [Models - TS Forecast](#models---ts-forecast) 예측 모델
+- [Models - TS Anomaly Detection](#models---ts-anomaly-detection) 이상 탐지 모델
 - [Agents](#agents) 항목
 - [Papers](#papers) 논문
 - [Learning Resources](#learning-resources) 참고용
@@ -14,7 +15,7 @@
 - [Related References](#related-references) 큐레이션
 - [Leaderboards](#leaderboards) 정리
 
-## Models
+## Models - TS Forecast
 
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
@@ -35,6 +36,12 @@
 | TimeMixer | Past/Future Mixing 블록 탑재한 MLP 기반 장·단기 예측 모델(TimeMixer++) | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
 | DLinear | 분해 + 선형 회귀 활용해 간결하면서 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
 | DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
+
+## Models - TS Anomaly Detection
+
+| Model | Description | Paper | GitHub | 비고 |
+| --- | --- | --- | --- | --- |
+| Telemanom | LSTM과 비모수 동적 임계값으로 우주선 텔레메트리 이상 탐지 (NASA SMAP/Curiosity 데이터 활용) | [arXiv:1802.04431](https://arxiv.org/abs/1802.04431) | [khundman/telemanom](https://github.com/khundman/telemanom) | LSTM |
 
 ## Agents
 
