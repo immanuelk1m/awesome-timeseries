@@ -53,7 +53,7 @@
 
 | Resource | Description | Link Type |
 | --- | --- | --- |
-| Time Series Forecasting with Deep Learning | 딥러닝 기반 시계열 예측 단계별로 다루는 실습 중심 강의 시리즈 | [YouTube](https://www.youtube.com/watch?v=uwKiT1o1TkI&list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE&index=1) |
+| Time Series Forecasting | 시계열 예측 단계별로 다루는 실습 중심 강의 시리즈 | [YouTube](https://www.youtube.com/watch?v=uwKiT1o1TkI&list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE&index=1) |
 | Forecasting: Principles and Practice (3rd ed.) | 통계 기반 시계열 분석 이론과 R 실습 제공하는 무료 온라인 교재 | [Book](https://otexts.com/fpp3/intro.html) |
 | Microprediction | 실시간 예측 경진대회와 오픈소스 생태계로 다양한 챌린지 경험 가능 | [GitHub](https://github.com/microprediction) |
 | Time-Series-Library (TSLib) | 예측·대체·분류·이상탐지 등 5대 작업 재현성 있게 지원하는 실험 프레임워크 | [GitHub](https://github.com/thuml/Time-Series-Library) |
