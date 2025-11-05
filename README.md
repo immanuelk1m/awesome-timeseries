@@ -5,16 +5,17 @@
 `awesome-time-series` 레포 정리 스타일 참고해 큐레이션 재구성. 요청 따라 **모델 / 에이전트 / 학습자료 / 리더보드** 체계 사용.
 
 ## Contents
-- [Models](#models) 목록
+- [Models - TS Forecast](#models---ts-forecast) 예측 모델
+- [Models - TS Anomaly Detection](#models---ts-anomaly-detection) 이상 탐지 모델
 - [Agents](#agents) 항목
 - [Papers](#papers) 논문
 - [Learning Resources](#learning-resources) 참고용
 - [Utilities](#utilities) 도구
-- [Leaderboards](#leaderboards) 정리
 - [Community](#community) 토론
 - [Related References](#related-references) 큐레이션
+- [Leaderboards](#leaderboards) 정리
 
-## Models
+## Models - TS Forecast
 
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
@@ -35,6 +36,14 @@
 | TimeMixer | Past/Future Mixing 블록 탑재한 MLP 기반 장·단기 예측 모델(TimeMixer++) | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
 | DLinear | 분해 + 선형 회귀 활용해 간결하면서 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
 | DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
+
+## Models - TS Anomaly Detection
+
+| Model | Description | Paper | GitHub | 비고 |
+| --- | --- | --- | --- | --- |
+| Telemanom | LSTM과 비모수 동적 임계값으로 우주선 텔레메트리 이상 탐지 (NASA SMAP/Curiosity 데이터 활용) | [arXiv:1802.04431](https://arxiv.org/abs/1802.04431) | [khundman/telemanom](https://github.com/khundman/telemanom) | LSTM |
+| CATCH | 주파수 패칭과 채널 인식 메커니즘으로 다변량 시계열 이상 탐지 (ICLR 2025) | [arXiv:2410.12261](https://arxiv.org/abs/2410.12261) | [decisionintelligence/catch](https://github.com/decisionintelligence/catch) | Frequency Domain |
+| PatchAD | 대조 학습과 다중 스케일 패치 기반 경량 MLP-Mixer로 시계열 이상 탐지 | [arXiv:2401.09793](https://arxiv.org/abs/2401.09793) | [EmorZz1G/PatchAD](https://github.com/EmorZz1G/PatchAD) | MLP-Mixer |
 
 ## Agents
 
@@ -66,13 +75,11 @@
 | --- | --- | --- |
 | PyTorch Forecasting | PyTorch Lightning 기반 시계열 예측 라이브러리로 다양한 딥러닝 모델 통합 제공 | [sktime/pytorch-forecasting](https://github.com/sktime/pytorch-forecasting) |
 | data-science-template | 데이터 사이언스 프로젝트를 표준 구조로 정의해 재현성과 유지보수성을 높이는 템플릿 | [CodeCutTech/data-science-template](https://github.com/CodeCutTech/data-science-template) |
-
-## Leaderboards
-
-| Leaderboard | Focus | Link |
-| --- | --- | --- |
-| Forecasting Experts' Verdict (FEV) | AutoGluon 팀이 운영하는 시계열 예측 리더보드로 다양한 데이터셋 성능 비교 가능 | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
-| GIFT Evaluation Leaderboard | Salesforce 글로벌 시계열 벤치마크 GIFT 평가 결과와 파이프라인 제공 | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
+| Kats | 시계열 분석·예측·이상 탐지·특징 추출을 경량 확장 가능한 프레임워크로 제공 (Facebook Research) | [facebookresearch/Kats](https://github.com/facebookresearch/Kats) |
+| Orion | 비지도 학습 기반 시계열 이상 탐지용 머신러닝 파이프라인 라이브러리 | [sintel-dev/Orion](https://github.com/sintel-dev/Orion) |
+| Alibi Detect | 시계열·이미지·텍스트 등 다양한 데이터에서 이상치·드리프트·적대적 예제 탐지 라이브러리 | [SeldonIO/alibi-detect](https://github.com/SeldonIO/alibi-detect) |
+| River | 스트리밍 데이터 온라인 학습용 머신러닝 라이브러리로 Concept Drift 대응 가능 | [online-ml/river](https://github.com/online-ml/river) |
+| Darts | 통계 모델과 딥러닝 방법을 scikit-learn 스타일 통합 인터페이스로 제공하는 시계열 예측·이상 탐지 라이브러리 | [unit8co/darts](https://github.com/unit8co/darts) |
 
 ## Community
 
@@ -89,3 +96,10 @@
 | awesome-industrial-anomaly-detection | 산업 현장 이상탐지 관련 논문·데이터셋·방법론 모은 큐레이션 | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
 | ts-anomaly-benchmark | 딥러닝 기반 시계열 이상 탐지 방법론·데이터셋·평가 메트릭 모은 벤치마크 (Monash/Griffith/IBM) | [GitHub](https://github.com/zamanzadeh/ts-anomaly-benchmark) |
 | awesome-TS-anomaly-detection | 시계열 이상 탐지를 위한 도구·데이터셋 모은 종합 카탈로그 | [GitHub](https://github.com/rob-med/awesome-TS-anomaly-detection) |
+
+## Leaderboards
+
+| Leaderboard | Focus | Link |
+| --- | --- | --- |
+| Forecasting Experts' Verdict (FEV) | AutoGluon 팀이 운영하는 시계열 예측 리더보드로 다양한 데이터셋 성능 비교 가능 | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
+| GIFT Evaluation Leaderboard | Salesforce 글로벌 시계열 벤치마크 GIFT 평가 결과와 파이프라인 제공 | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
