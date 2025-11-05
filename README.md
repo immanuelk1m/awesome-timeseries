@@ -42,6 +42,7 @@
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
 | Telemanom | LSTM과 비모수 동적 임계값으로 우주선 텔레메트리 이상 탐지 (NASA SMAP/Curiosity 데이터 활용) | [arXiv:1802.04431](https://arxiv.org/abs/1802.04431) | [khundman/telemanom](https://github.com/khundman/telemanom) | LSTM |
+| CATCH | 주파수 패칭과 채널 인식 메커니즘으로 다변량 시계열 이상 탐지 (ICLR 2025) | [arXiv:2410.12261](https://arxiv.org/abs/2410.12261) | [decisionintelligence/catch](https://github.com/decisionintelligence/catch) | Frequency Domain |
 
 ## Agents
 
