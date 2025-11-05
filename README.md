@@ -5,14 +5,16 @@
 `awesome-time-series` 레포 정리 스타일 참고해 큐레이션 재구성. 요청 따라 **모델 / 에이전트 / 학습자료 / 리더보드** 체계 사용.
 
 ## Contents
-- [모델](#모델) 목록
-- [에이전트](#에이전트) 항목
-- [학습자료](#학습자료) 참고용
-- [유틸리티](#유틸리티) 도구
-- [리더보드](#리더보드) 정리
-- [관련 레퍼런스](#관련-레퍼런스) 큐레이션
+- [Models](#models) 목록
+- [Agents](#agents) 항목
+- [Papers](#papers) 논문
+- [Learning Resources](#learning-resources) 참고용
+- [Utilities](#utilities) 도구
+- [Leaderboards](#leaderboards) 정리
+- [Community](#community) 토론
+- [Related References](#related-references) 큐레이션
 
-## 모델
+## Models
 
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
@@ -36,17 +38,17 @@
 | DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
 | arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) | - | Preprint |
 
-## 에이전트
+## Agents
 
 | Agent | Description | GitHub |
 | --- | --- | --- |
 | DeepAnalyze | 데이터 중심 업무(EDA→전처리→모델링→리포트)를 에이전트형 LLM이 자율 처리하도록 설계 | [ruc-datalab/DeepAnalyze](https://github.com/ruc-datalab/DeepAnalyze) |
 | TimeCopilot | LLM과 Chronos/Moirai/TimesFM/TimeGPT 백엔드 결합해 예측·교차검증·이상탐지 자동화 | [AzulGarza/timecopilot](https://github.com/AzulGarza/timecopilot) |
 
-## 논문
+## Papers
 - 모델 소개 넘어서는 리뷰·서베이·응용 사례 중심 자료 선별해 추가 예정
 
-## 학습자료
+## Learning Resources
 
 | Resource | Description | Link Type |
 | --- | --- | --- |
@@ -57,26 +59,26 @@
 | Machine Learning Systems (Harvard) | 하버드대가 무료로 공개한 머신러닝 시스템 설계·운영 교재 | [Book](https://www.mlsysbook.ai/) |
 | O'Reilly Learning Platform | EDU 계정 있으면 다양한 머신러닝·데이터 과학 전자책 무료로 열람 가능 | [Learning Portal](https://learning.oreilly.com/home/) |
 
-## 유틸리티
+## Utilities
 
 | Utility | Description | GitHub |
 | --- | --- | --- |
 | data-science-template | 데이터 사이언스 프로젝트를 표준 구조로 정의해 재현성과 유지보수성을 높이는 템플릿 | [CodeCutTech/data-science-template](https://github.com/CodeCutTech/data-science-template) |
 
-## 리더보드
+## Leaderboards
 
 | Leaderboard | Focus | Link |
 | --- | --- | --- |
 | Forecasting Experts' Verdict (FEV) | AutoGluon 팀이 운영하는 시계열 예측 리더보드로 다양한 데이터셋 성능 비교 가능 | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
 | GIFT Evaluation Leaderboard | Salesforce 글로벌 시계열 벤치마크 GIFT 평가 결과와 파이프라인 제공 | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
 
-## 커뮤니티
+## Community
 
 | Topic | Description | Link |
 | --- | --- | --- |
 | Why Mamba did not catch on? | Mamba 계열 모델 채택과 한계에 대한 커뮤니티 토론 | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1hpg91o/d_why_mamba_did_not_catch_on/) |
 
-## 관련 레퍼런스
+## Related References
 
 | Repository | Description | Link |
 | --- | --- | --- |
