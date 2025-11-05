@@ -35,7 +35,6 @@
 | TimeMixer | Past/Future Mixing 블록 탑재한 MLP 기반 장·단기 예측 모델(TimeMixer++) | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
 | DLinear | 분해 + 선형 회귀 활용해 간결하면서 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
 | DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
-| arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) | - | Preprint |
 
 ## Agents
 
@@ -45,7 +44,10 @@
 | TimeCopilot | LLM과 Chronos/Moirai/TimesFM/TimeGPT 백엔드 결합해 예측·교차검증·이상탐지 자동화 | [AzulGarza/timecopilot](https://github.com/AzulGarza/timecopilot) |
 
 ## Papers
-- 모델 소개 넘어서는 리뷰·서베이·응용 사례 중심 자료 선별해 추가 예정
+
+| Title | Description | Link |
+| --- | --- | --- |
+| arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
 
 ## Learning Resources
 
