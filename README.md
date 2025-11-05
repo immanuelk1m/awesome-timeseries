@@ -10,12 +10,13 @@
 - [학습자료](#학습자료) 참고용
 - [유틸리티](#유틸리티) 도구
 - [리더보드](#리더보드) 정리
+- [관련 레퍼런스](#관련-레퍼런스) 큐레이션
 
 ## 모델
 
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
-| TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | - | [google/timesfm-2.5-200m-pytorch](https://huggingface.co/google/timesfm-2.5-200m-pytorch) | Foundation Transformer |
+| TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
 | Autoformer | Auto-Correlation 기반 자동 분해로 장기 예측 성능 높인 모델 | [arXiv:2106.13008](https://arxiv.org/abs/2106.13008) | [thuml/Autoformer](https://github.com/thuml/Autoformer) | Transformer |
 | FEDformer | Fourier/Wavelet 기반 주파수 분해로 장기 예측 효율 높인 모델 | [ICML 2022](https://proceedings.mlr.press/v162/zhou22g/zhou22g.pdf) | [MAZiqing/FEDformer](https://github.com/MAZiqing/FEDformer) | Transformer |
 | Informer | ProbSparse Attention으로 긴 시계열 효율적으로 모델링하는 구조 | [arXiv:2012.07436](https://arxiv.org/abs/2012.07436) | [zhouhaoyi/Informer2020](https://github.com/zhouhaoyi/Informer2020) | Transformer |
@@ -49,19 +50,14 @@
 
 | Resource | Description | Link Type |
 | --- | --- | --- |
-| awesome-time-series | 시계열 관련 패키지·논문·학습 자료 폭넓게 모은 Awesome 리스트라 도구 지형 조사에 유용 | [GitHub](https://github.com/lmmentel/awesome-time-series) |
 | Time Series Forecasting with Deep Learning | 딥러닝 기반 시계열 예측 단계별로 다루는 실습 중심 강의 시리즈 | [YouTube](https://www.youtube.com/watch?v=uwKiT1o1TkI&list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE&index=1) |
 | Forecasting: Principles and Practice (3rd ed.) | 통계 기반 시계열 분석 이론과 R 실습 제공하는 무료 온라인 교재 | [Book](https://otexts.com/fpp3/intro.html) |
 | Microprediction | 실시간 예측 경진대회와 오픈소스 생태계로 다양한 챌린지 경험 가능 | [GitHub](https://github.com/microprediction) |
-| awesome-time-series (cuge1995) | 연구 논문과 벤치마크, 응용 사례 중심으로 최신 학술 동향 정리한 큐레이션 | [GitHub](https://github.com/cuge1995/awesome-time-series) |
 | Time-Series-Library (TSLib) | 예측·대체·분류·이상탐지 등 5대 작업 재현성 있게 지원하는 실험 프레임워크 | [GitHub](https://github.com/thuml/Time-Series-Library) |
 | Machine Learning Systems (Harvard) | 하버드대가 무료로 공개한 머신러닝 시스템 설계·운영 교재 | [Book](https://www.mlsysbook.ai/) |
 | O'Reilly Learning Platform | EDU 계정 있으면 다양한 머신러닝·데이터 과학 전자책 무료로 열람 가능 | [Learning Portal](https://learning.oreilly.com/home/) |
-| awesome-industrial-anomaly-detection | 산업 현장 이상탐지 관련 논문·데이터셋·방법론 모은 큐레이션 | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
 
 ## 유틸리티
-
-Why? 표준 구조 기반 프로젝트 필요. 팀원 유지보수와 수정 용이.
 
 | Utility | Description | GitHub |
 | --- | --- | --- |
@@ -79,3 +75,11 @@ Why? 표준 구조 기반 프로젝트 필요. 팀원 유지보수와 수정 용
 | Topic | Description | Link |
 | --- | --- | --- |
 | Why Mamba did not catch on? | Mamba 계열 모델 채택과 한계에 대한 커뮤니티 토론 | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1hpg91o/d_why_mamba_did_not_catch_on/) |
+
+## 관련 레퍼런스
+
+| Repository | Description | Link |
+| --- | --- | --- |
+| awesome-time-series | 시계열 관련 패키지·논문·학습 자료 폭넓게 모은 Awesome 리스트라 도구 지형 조사에 유용 | [GitHub](https://github.com/lmmentel/awesome-time-series) |
+| awesome-time-series (cuge1995) | 연구 논문과 벤치마크, 응용 사례 중심으로 최신 학술 동향 정리한 큐레이션 | [GitHub](https://github.com/cuge1995/awesome-time-series) |
+| awesome-industrial-anomaly-detection | 산업 현장 이상탐지 관련 논문·데이터셋·방법론 모은 큐레이션 | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
