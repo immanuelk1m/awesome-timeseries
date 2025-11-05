@@ -22,7 +22,7 @@
 | Autoformer | Auto-Correlation 기반 자동 분해로 장기 예측 성능 높인 모델 | [arXiv:2106.13008](https://arxiv.org/abs/2106.13008) | [thuml/Autoformer](https://github.com/thuml/Autoformer) | Transformer |
 | FEDformer | Fourier/Wavelet 기반 주파수 분해로 장기 예측 효율 높인 모델 | [ICML 2022](https://proceedings.mlr.press/v162/zhou22g/zhou22g.pdf) | [MAZiqing/FEDformer](https://github.com/MAZiqing/FEDformer) | Transformer |
 | Informer | ProbSparse Attention으로 긴 시계열 효율적으로 모델링하는 구조 | [arXiv:2012.07436](https://arxiv.org/abs/2012.07436) | [zhouhaoyi/Informer2020](https://github.com/zhouhaoyi/Informer2020) | Transformer |
-| iTransformer | 변수를 토큰으로 다루는 Inverted Transformer로 다변량 상관관계 학습 | [OpenReview]([https://openreview.net/pdf?id=QK6ogQ7MZLX](https://arxiv.org/abs/2310.06625) | [thuml/iTransformer](https://github.com/thuml/iTransformer) | Transformer |
+| iTransformer | 변수를 토큰으로 다루는 Inverted Transformer로 다변량 상관관계 학습 | [arXiv:2310.06625](https://arxiv.org/abs/2310.06625) | [thuml/iTransformer](https://github.com/thuml/iTransformer) | Transformer |
 | Nonstationary Transformer | 시계열 정상화와 De-stationary Attention으로 비정상 데이터 안정화 | [arXiv:2205.14415](https://arxiv.org/abs/2205.14415) | [thuml/Nonstationary_Transformers](https://github.com/thuml/Nonstationary_Transformers) | Transformer |
 | Temporal Fusion Transformer (TFT) | 다중 지평선 예측에 적합한 주의 기반 아키텍처로 변수 중요도 해석 가능 | [arXiv:1912.09363](https://arxiv.org/abs/1912.09363) | [google-research/tft](https://github.com/google-research/google-research/tree/master/tft) | Transformer |
 | TimeXer | 외생 변수 통합해 패치·변수 단위 주의 메커니즘으로 SOTA 기록 | [arXiv:2403.09898](https://arxiv.org/pdf/2403.09898) | [thuml/TimeXer](https://github.com/thuml/TimeXer) | Transformer |
