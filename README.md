@@ -87,3 +87,5 @@
 | awesome-time-series | 시계열 관련 패키지·논문·학습 자료 폭넓게 모은 Awesome 리스트라 도구 지형 조사에 유용 | [GitHub](https://github.com/lmmentel/awesome-time-series) |
 | awesome-time-series (cuge1995) | 연구 논문과 벤치마크, 응용 사례 중심으로 최신 학술 동향 정리한 큐레이션 | [GitHub](https://github.com/cuge1995/awesome-time-series) |
 | awesome-industrial-anomaly-detection | 산업 현장 이상탐지 관련 논문·데이터셋·방법론 모은 큐레이션 | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
+| ts-anomaly-benchmark | 딥러닝 기반 시계열 이상 탐지 방법론·데이터셋·평가 메트릭 모은 벤치마크 (Monash/Griffith/IBM) | [GitHub](https://github.com/zamanzadeh/ts-anomaly-benchmark) |
+| awesome-TS-anomaly-detection | 시계열 이상 탐지를 위한 도구·데이터셋 모은 종합 카탈로그 | [GitHub](https://github.com/rob-med/awesome-TS-anomaly-detection) |
