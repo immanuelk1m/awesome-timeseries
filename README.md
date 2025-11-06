@@ -48,6 +48,8 @@
 | DualTF | 시간·주파수 이중 도메인 중첩 윈도우로 패턴 기반 이상치 탐지 정확도 향상 (TheWebConf 2024) | [ACM DL](https://dl.acm.org/doi/10.1145/3589334.3645556) | [kaist-dmlab/DualTF](https://github.com/kaist-dmlab/DualTF) | Dual-Domain |
 | TFMAE | Masked Autoencoder와 시간·주파수 마스킹으로 분포 변화에 강건한 이상 탐지 (ICDE 2024) | [Paper](https://github.com/LMissher/TFMAE/blob/main/paper/TFMAE.pdf) | [LMissher/TFMAE](https://github.com/LMissher/TFMAE) | Masked Autoencoder |
 | NPSR | Nominality Score 기반 듀얼 재구성으로 point·contextual 이상치 동시 탐지 (NeurIPS 2023) | [arXiv:2310.15416](https://arxiv.org/abs/2310.15416) | [andrewlai61616/NPSR](https://github.com/andrewlai61616/NPSR) | Performer |
+| DCdetector | 듀얼 브랜치 어텐션과 순수 대조 학습으로 이상치 판별 표현 학습 (KDD 2023) | [arXiv:2306.10347](https://arxiv.org/abs/2306.10347) | [DAMO-DI-ML/KDD2023-DCdetector](https://github.com/DAMO-DI-ML/KDD2023-DCdetector) | Contrastive Learning |
+| ModernTCN | 순수 컨볼루션 구조로 이상 탐지·예측·분류 등 5대 시계열 작업 범용 지원 (ICLR 2024 Spotlight) | [OpenReview](https://openreview.net/pdf?id=vpJMJerXHU) | [luodhhh/ModernTCN](https://github.com/luodhhh/ModernTCN) | CNN |
 | CARLA | 대조 학습 기반 자기지도 학습으로 레이블 없이 시계열 이상치 표현 학습 | [Pattern Recognition](https://www.sciencedirect.com/science/article/pii/S0031320324006253) | [zamanzadeh/CARLA](https://github.com/zamanzadeh/CARLA) | Contrastive Learning |
 | PatchAD | 대조 학습과 다중 스케일 패치 기반 경량 MLP-Mixer로 시계열 이상 탐지 | [arXiv:2401.09793](https://arxiv.org/abs/2401.09793) | [EmorZz1G/PatchAD](https://github.com/EmorZz1G/PatchAD) | MLP-Mixer |
 
