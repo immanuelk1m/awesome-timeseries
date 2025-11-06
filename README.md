@@ -44,6 +44,9 @@
 | --- | --- | --- | --- | --- |
 | Telemanom | LSTM과 비모수 동적 임계값으로 우주선 텔레메트리 이상 탐지 (NASA SMAP/Curiosity 데이터 활용) | [arXiv:1802.04431](https://arxiv.org/abs/1802.04431) | [khundman/telemanom](https://github.com/khundman/telemanom) | LSTM |
 | CATCH | 주파수 패칭과 채널 인식 메커니즘으로 다변량 시계열 이상 탐지 (ICLR 2025) | [arXiv:2410.12261](https://arxiv.org/abs/2410.12261) | [decisionintelligence/catch](https://github.com/decisionintelligence/catch) | Frequency Domain |
+| DualTF | 시간·주파수 이중 도메인 중첩 윈도우로 패턴 기반 이상치 탐지 정확도 향상 (TheWebConf 2024) | [ACM DL](https://dl.acm.org/doi/10.1145/3589334.3645556) | [kaist-dmlab/DualTF](https://github.com/kaist-dmlab/DualTF) | Dual-Domain |
+| TFMAE | Masked Autoencoder와 시간·주파수 마스킹으로 분포 변화에 강건한 이상 탐지 (ICDE 2024) | [Paper](https://github.com/LMissher/TFMAE/blob/main/paper/TFMAE.pdf) | [LMissher/TFMAE](https://github.com/LMissher/TFMAE) | Masked Autoencoder |
+| CARLA | 대조 학습 기반 자기지도 학습으로 레이블 없이 시계열 이상치 표현 학습 | [Pattern Recognition](https://www.sciencedirect.com/science/article/pii/S0031320324006253) | [zamanzadeh/CARLA](https://github.com/zamanzadeh/CARLA) | Contrastive Learning |
 | PatchAD | 대조 학습과 다중 스케일 패치 기반 경량 MLP-Mixer로 시계열 이상 탐지 | [arXiv:2401.09793](https://arxiv.org/abs/2401.09793) | [EmorZz1G/PatchAD](https://github.com/EmorZz1G/PatchAD) | MLP-Mixer |
 
 ## Agents
@@ -58,6 +61,7 @@
 | Title | Description | Link |
 | --- | --- | --- |
 | arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
+| Awesome Multivariate TS Anomaly Detection | 다변량 시계열 이상 탐지 논문을 연도·학회별로 정리한 읽기 리스트 | [GitHub](https://github.com/lzz19980125/awesome-multivariate-time-series-anomaly-detection-algorithms) |
 
 ## Learning Resources
 
