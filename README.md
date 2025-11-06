@@ -34,6 +34,7 @@
 | xLSTM-Mixer | xLSTM 블록과 Mixer 결합해 긴 시퀀스 정보 혼합 최적화 | [arXiv:2410.16928](https://arxiv.org/abs/2410.16928) | [mauricekraus/xlstm-mixer](https://github.com/mauricekraus/xlstm-mixer) | RNN + Mixer |
 | N-BEATS | Residual stack과 forward/backward 분해 활용한 MLP 기반 모델 | [arXiv:1905.10437](https://arxiv.org/abs/1905.10437) | [ServiceNow/N-BEATS](https://github.com/ServiceNow/N-BEATS) | MLP |
 | TimeMixer | Past/Future Mixing 블록 탑재한 MLP 기반 장·단기 예측 모델(TimeMixer++) | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
+| DUET | 시간·채널 듀얼 클러스터링으로 다변량 시계열 패턴 학습해 장기 예측 정확도 향상 (KDD 2025) | [arXiv:2412.10859](https://arxiv.org/abs/2412.10859) | [decisionintelligence/DUET](https://github.com/decisionintelligence/DUET) | Clustering |
 | DLinear | 분해 + 선형 회귀 활용해 간결하면서 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
 | DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
 
