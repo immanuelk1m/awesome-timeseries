@@ -61,6 +61,7 @@
 | Title | Description | Link |
 | --- | --- | --- |
 | arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
+| Quo Vadis, Unsupervised Time Series Anomaly Detection? | 비지도 시계열 이상 탐지 연구의 평가 메트릭·벤치마킹 문제 분석하고 단순한 베이스라인 효과 입증 (ICML 2024 Position Paper) | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
 | Awesome Multivariate TS Anomaly Detection | 다변량 시계열 이상 탐지 논문을 연도·학회별로 정리한 읽기 리스트 | [GitHub](https://github.com/lzz19980125/awesome-multivariate-time-series-anomaly-detection-algorithms) |
 
 ## Learning Resources
