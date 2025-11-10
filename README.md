@@ -97,6 +97,7 @@
 | Topic | Description | Link |
 | --- | --- | --- |
 | Why Mamba did not catch on? | Mamba 계열 모델 채택과 한계에 대한 커뮤니티 토론 | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1hpg91o/d_why_mamba_did_not_catch_on/) |
+| Most Time Series Anomaly Detection results are meaningless | 시계열 이상 탐지 결과의 의미와 평가 방법론에 대한 토론 | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1gmwxnr/r_most_time_series_anomaly_detection_results_are/) |
 
 ## Related References
 
