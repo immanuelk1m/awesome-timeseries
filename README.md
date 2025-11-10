@@ -90,6 +90,7 @@
 | Alibi Detect | 시계열·이미지·텍스트 등 다양한 데이터에서 이상치·드리프트·적대적 예제 탐지 라이브러리 | [SeldonIO/alibi-detect](https://github.com/SeldonIO/alibi-detect) |
 | River | 스트리밍 데이터 온라인 학습용 머신러닝 라이브러리로 Concept Drift 대응 가능 | [online-ml/river](https://github.com/online-ml/river) |
 | Darts | 통계 모델과 딥러닝 방법을 scikit-learn 스타일 통합 인터페이스로 제공하는 시계열 예측·이상 탐지 라이브러리 | [unit8co/darts](https://github.com/unit8co/darts) |
+| Prophet | 비즈니스 시계열 예측 전용 라이브러리로 계절성·트렌드·휴일 효과 자동 처리 지원 (Facebook Core Data Science) | [facebook/prophet](https://github.com/facebook/prophet) |
 
 ## Community
 
