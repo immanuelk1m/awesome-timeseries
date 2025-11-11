@@ -115,3 +115,5 @@
 | --- | --- | --- |
 | Forecasting Experts' Verdict (FEV) | AutoGluon 팀이 운영하는 시계열 예측 리더보드로 다양한 데이터셋 성능 비교 가능 | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
 | GIFT Evaluation Leaderboard | Salesforce 글로벌 시계열 벤치마크 GIFT 평가 결과와 파이프라인 제공 | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
+| TAB | 시계열 이상치 탐지 리더보드 (CATCH) | [Github]([https://huggingface.co/spaces/Salesforce/GIFT-Eval](https://github.com/decisionintelligence/TAB)) |
+
