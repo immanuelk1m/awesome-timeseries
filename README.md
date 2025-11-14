@@ -7,6 +7,7 @@
 ## Contents
 - [Models - TS Forecast](#models---ts-forecast) 예측 모델
 - [Models - TS Anomaly Detection](#models---ts-anomaly-detection) 이상 탐지 모델
+- [Model - Foundation](#model---foundation)
 - [Agents](#agents) 항목
 - [Papers](#papers) 논문
 - [Learning Resources](#learning-resources) 참고용
@@ -19,7 +20,6 @@
 
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
-| TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
 | Autoformer | Auto-Correlation 기반 자동 분해로 장기 예측 성능 높인 모델 | [arXiv:2106.13008](https://arxiv.org/abs/2106.13008) | [thuml/Autoformer](https://github.com/thuml/Autoformer) | Transformer |
 | FEDformer | Fourier/Wavelet 기반 주파수 분해로 장기 예측 효율 높인 모델 | [ICML 2022](https://proceedings.mlr.press/v162/zhou22g/zhou22g.pdf) | [MAZiqing/FEDformer](https://github.com/MAZiqing/FEDformer) | Transformer |
 | Informer | ProbSparse Attention으로 긴 시계열 효율적으로 모델링하는 구조 | [arXiv:2012.07436](https://arxiv.org/abs/2012.07436) | [zhouhaoyi/Informer2020](https://github.com/zhouhaoyi/Informer2020) | Transformer |
@@ -52,6 +52,17 @@
 | ModernTCN | 순수 컨볼루션 구조로 이상 탐지·예측·분류 등 5대 시계열 작업 범용 지원 (ICLR 2024 Spotlight) | [OpenReview](https://openreview.net/pdf?id=vpJMJerXHU) | [luodhhh/ModernTCN](https://github.com/luodhhh/ModernTCN) | CNN |
 | CARLA | 대조 학습 기반 자기지도 학습으로 레이블 없이 시계열 이상치 표현 학습 | [Pattern Recognition](https://www.sciencedirect.com/science/article/pii/S0031320324006253) | [zamanzadeh/CARLA](https://github.com/zamanzadeh/CARLA) | Contrastive Learning |
 | PatchAD | 대조 학습과 다중 스케일 패치 기반 경량 MLP-Mixer로 시계열 이상 탐지 | [arXiv:2401.09793](https://arxiv.org/abs/2401.09793) | [EmorZz1G/PatchAD](https://github.com/EmorZz1G/PatchAD) | MLP-Mixer |
+
+## Model - Foundation
+
+| Model | Description | Paper | GitHub | 비고 |
+| --- | --- | --- | --- | --- |
+| Chronos Forecasting | Amazon Science의 Chronos 시리즈(Chronos, Chronos-Bolt, Chronos-2)로 사전학습된 시계열 예측 모델을 zero-shot·패치 기반·covariate-aware 환경에서 인퍼런스만으로 제공 | [arXiv:2403.07815](https://arxiv.org/abs/2403.07815) | [amazon-science/chronos-forecasting](https://github.com/amazon-science/chronos-forecasting) | Pretrained Suite |
+| Chronos-2 | 그룹 어텐션 기반 in-context 학습으로 univariate·multivariate·covariate-informed 예측을 zero-shot으로 처리하며 fev-bench·GIFT-Eval·Chronos Benchmark II에서 최상위 성능 기록 | [arXiv:2510.15821](https://arxiv.org/abs/2510.15821) | - | Universal ICL |
+| Toto | 관측지표(Observability) 중심의 시계열 대규모 예측용 Transformer로 BOOM Benchmark 기반 zero-shot/확률적 예측을 지원하며 2조 이상의 시계열 포인트로 사전학습된 decoder-only 아키텍처 | [arXiv:2505.14766](https://arxiv.org/abs/2505.14766) | [DataDog/toto](https://github.com/DataDog/toto) | Observability Suite |
+| Lag-Llama | probabilistic forecasting을 위해 context 길이/patch tuning과 RoPE 확장을 사용하는 최초 오픈소스 파운데이션 모델; zero-shot + finetuning 스크립트까지 공개 | [arXiv:2310.08278](https://arxiv.org/abs/2310.08278) | [time-series-foundation-models/lag-llama](https://github.com/time-series-foundation-models/lag-llama) | Zero-shot Probabilistic |
+| Uni2TS / Moirai | Universal Time Series Transformer 연구용 라이브러리로 Moirai 시리즈 및 Moirai MoE 모델을 대규모 pretrain·finetune·평가·/blog 링크로 소개 | [arXiv:2402.02592](https://arxiv.org/abs/2402.02592) | [SalesforceAIResearch/uni2ts](https://github.com/SalesforceAIResearch/uni2ts) | See [Salesforce Moirai Blog](https://www.salesforce.com/blog/moirai) |
+| TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
 
 ## Agents
 
@@ -116,4 +127,3 @@
 | Forecasting Experts' Verdict (FEV) | AutoGluon 팀이 운영하는 시계열 예측 리더보드로 다양한 데이터셋 성능 비교 가능 | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
 | GIFT Evaluation Leaderboard | Salesforce 글로벌 시계열 벤치마크 GIFT 평가 결과와 파이프라인 제공 | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
 | TAB | 시계열 이상치 탐지 리더보드 (CATCH) | [Github](https://github.com/decisionintelligence/TAB) |
-
