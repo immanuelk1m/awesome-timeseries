@@ -63,7 +63,7 @@
 | Lag-Llama | probabilistic forecasting을 위해 context 길이/patch tuning과 RoPE 확장을 사용하는 최초 오픈소스 파운데이션 모델; zero-shot + finetuning 스크립트까지 공개 | [arXiv:2310.08278](https://arxiv.org/abs/2310.08278) | [time-series-foundation-models/lag-llama](https://github.com/time-series-foundation-models/lag-llama) | Zero-shot Probabilistic |
 | Uni2TS / Moirai | Universal Time Series Transformer 연구용 라이브러리로 Moirai 시리즈 및 Moirai MoE 모델을 대규모 pretrain·finetune·평가·/blog 링크로 소개 | [arXiv:2402.02592](https://arxiv.org/abs/2402.02592) | [SalesforceAIResearch/uni2ts](https://github.com/SalesforceAIResearch/uni2ts) | See [Salesforce Moirai Blog](https://www.salesforce.com/blog/moirai) |
 | TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
-| TempoPFN | 병렬화 가능한 형태로 설계된 Linear RNN 기반 단변량(univariate) 시계열용 파운데이션 모델 | [arXiv:2310.10688](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
+| TempoPFN | 병렬화 가능한 형태로 설계된 Linear RNN 기반 단변량(univariate) 시계열용 파운데이션 모델 | [arXiv:2510.25502](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
 
 ## Agents
 
