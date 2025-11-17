@@ -29,13 +29,13 @@
 | TimeXer | 외생 변수 통합해 패치·변수 단위 주의 메커니즘으로 SOTA 기록 | [arXiv:2403.09898](https://arxiv.org/pdf/2403.09898) | [thuml/TimeXer](https://github.com/thuml/TimeXer) | Transformer |
 | TimesNet | 1D 시계열을 2D 텐서로 투영해 공간 패턴 학습하는 범용 모델 | [arXiv:2210.02186](https://arxiv.org/abs/2210.02186) | [thuml/TimesNet](https://github.com/thuml/TimesNet) | Transformer-like |
 | CMamba | Convolutional Selective SSM으로 다변량 시계열 장기 의존성 개선 | [arXiv:2406.05316](https://arxiv.org/pdf/2406.05316) | [zclzcl0223/CMamba](https://github.com/zclzcl0223/CMamba) | SSM (Mamba) |
-| Mamba | Selective State Space 모델로 선형 시간 복잡도로 긴 시퀀스 학습 | [arXiv:2405.21060](https://arxiv.org/pdf/2405.21060) | [state-spaces/mamba](https://github.com/state-spaces/mamba) | SSM (Mamba) |
+| Mamba | Selective State Space 모델로 선형 시간 복잡도로 긴 시퀀스 학습 | [arXiv:2312.00752](https://arxiv.org/abs/2312.00752) | [state-spaces/mamba](https://github.com/state-spaces/mamba) | SSM (Mamba) |
 | S-Mamba | Sparse gating과 다중 상태 공간 결합으로 시계열 전용 Mamba 변형 구성 | [arXiv:2403.11144](https://arxiv.org/abs/2403.11144v3) | [wzhwzhwzh0921/S-D-Mamba](https://github.com/wzhwzhwzh0921/S-D-Mamba) | SSM (Mamba) |
 | xLSTM-Mixer | xLSTM 블록과 Mixer 결합해 긴 시퀀스 정보 혼합 최적화 | [arXiv:2410.16928](https://arxiv.org/abs/2410.16928) | [mauricekraus/xlstm-mixer](https://github.com/mauricekraus/xlstm-mixer) | RNN + Mixer |
 | N-BEATS | Residual stack과 forward/backward 분해 활용한 MLP 기반 모델 | [arXiv:1905.10437](https://arxiv.org/abs/1905.10437) | [ServiceNow/N-BEATS](https://github.com/ServiceNow/N-BEATS) | MLP |
 | TimeMixer | Past/Future Mixing 블록 탑재한 MLP 기반 장·단기 예측 모델(TimeMixer++) | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
 | DUET | 시간·채널 듀얼 클러스터링으로 다변량 시계열 패턴 학습해 장기 예측 정확도 향상 (KDD 2025) | [arXiv:2412.10859](https://arxiv.org/abs/2412.10859) | [decisionintelligence/DUET](https://github.com/decisionintelligence/DUET) | Clustering |
-| DLinear | 분해 + 선형 회귀 활용해 간결하면서 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
+| DLinear | LTSF-Linear의 일부로, 분해 + 선형 회귀 활용해 Transformer 대비 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
 | DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
 
 ## Models - TS Anomaly Detection
