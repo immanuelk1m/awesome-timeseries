@@ -9,6 +9,7 @@
 - [Models - TS Anomaly Detection](#models---ts-anomaly-detection) 이상 탐지 모델
 - [Model - Foundation](#model---foundation)
 - [Agents](#agents) 항목
+- [Survey](#survey) 서베이 논문
 - [Papers](#papers) 논문
 - [Learning Resources](#learning-resources) 참고용
 - [Utilities](#utilities) 도구
@@ -71,6 +72,13 @@
 | --- | --- | --- |
 | DeepAnalyze | 데이터 중심 업무(EDA→전처리→모델링→리포트)를 에이전트형 LLM이 자율 처리하도록 설계 | [ruc-datalab/DeepAnalyze](https://github.com/ruc-datalab/DeepAnalyze) |
 | TimeCopilot | LLM과 Chronos/Moirai/TimesFM/TimeGPT 백엔드 결합해 예측·교차검증·이상탐지 자동화 | [AzulGarza/timecopilot](https://github.com/AzulGarza/timecopilot) |
+
+## Survey
+
+| Title | Description | Link |
+| --- | --- | --- |
+| Foundation Models for Time Series Analysis: A Tutorial and Survey | 시계열 분석용 파운데이션 모델 튜토리얼·서베이로 모델 아키텍처, 사전 훈련 기법, 적응 방법, 데이터 모달리티를 방법론 기반 분류법으로 정리 (KDD 2024) | [arXiv:2403.14735](https://arxiv.org/abs/2403.14735) |
+| Deep Learning for Time Series Forecasting: A Survey | 딥러닝 기반 시계열 예측 서베이로 모델 아키텍처 일반 패러다임, 피처 추출 방법, 데이터셋을 체계적으로 정리 (IJMLC 2025) | [Springer](https://link.springer.com/article/10.1007/s13042-025-02560-w) |
 
 ## Papers
 
