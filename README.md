@@ -11,6 +11,7 @@
 - [Agents](#agents) 항목
 - [Survey](#survey) 서베이 논문
 - [Papers](#papers) 논문
+- [Datasets & Benchmarks](#datasets--benchmarks) 데이터셋/벤치마크
 - [Learning Resources](#learning-resources) 참고용
 - [Utilities](#utilities) 도구
 - [Community](#community) 토론
@@ -63,10 +64,14 @@
 | Model | Description | Paper | GitHub | 비고 |
 | --- | --- | --- | --- | --- |
 | Chronos Forecasting | Amazon Science의 Chronos 시리즈(Chronos, Chronos-Bolt, Chronos-2)로 사전학습된 시계열 예측 모델을 zero-shot·패치 기반·covariate-aware 환경에서 인퍼런스만으로 제공 | [arXiv:2403.07815](https://arxiv.org/abs/2403.07815) | [amazon-science/chronos-forecasting](https://github.com/amazon-science/chronos-forecasting) | Pretrained Suite |
-| Chronos-2 | 그룹 어텐션 기반 in-context 학습으로 univariate·multivariate·covariate-informed 예측을 zero-shot으로 처리하며 fev-bench·GIFT-Eval·Chronos Benchmark II에서 최상위 성능 기록 | [arXiv:2510.15821](https://arxiv.org/abs/2510.15821) | - | Universal ICL |
+| Chronos-2 | univariate에서 universal forecasting으로 확장한 후속 모델로, 그룹 어텐션 기반 in-context 학습을 통해 univariate·multivariate·covariate-informed 예측을 zero-shot으로 처리 | [Chronos-2: From Univariate to Universal Forecasting](https://arxiv.org/abs/2510.15821) | - | Universal ICL |
+| Time-MoE | 24억 파라미터 규모의 sparse Mixture-of-Experts 아키텍처를 사용하고 3,000억 개의 시계열 포인트(Time-300B)로 사전학습한 billion-scale foundation model | [Time-MoE: Billion-Scale Time Series Forecasting with Mixture-of-Experts](https://arxiv.org/abs/2409.16040) | - | MoE Foundation Model |
+| Sundial | 1조 개 이상의 데이터 포인트를 학습한 native time series foundation model로, 양자화 없이 연속 확률밀도함수를 직접 출력하는 distribution forecasting 지향 모델 | [Sundial: Native Time Series Foundation Model for Continuous Distribution Forecasting](https://arxiv.org/abs/2502.00816) | - | Continuous Distribution Forecasting |
+| TiRex | xLSTM와 in-context learning을 결합해 시계열 상태 추적(state-tracking) 능력을 강조한 forecasting 모델 | [TiRex: Time Series Forecasting with xLSTM and In-Context Learning](https://arxiv.org/abs/2505.23719) | - | xLSTM / ICL |
 | Toto | 관측지표(Observability) 중심의 시계열 대규모 예측용 Transformer로 BOOM Benchmark 기반 zero-shot/확률적 예측을 지원하며 2조 이상의 시계열 포인트로 사전학습된 decoder-only 아키텍처 | [arXiv:2505.14766](https://arxiv.org/abs/2505.14766) | [DataDog/toto](https://github.com/DataDog/toto) | Observability Suite |
 | Lag-Llama | probabilistic forecasting을 위해 context 길이/patch tuning과 RoPE 확장을 사용하는 최초 오픈소스 파운데이션 모델; zero-shot + finetuning 스크립트까지 공개 | [arXiv:2310.08278](https://arxiv.org/abs/2310.08278) | [time-series-foundation-models/lag-llama](https://github.com/time-series-foundation-models/lag-llama) | Zero-shot Probabilistic |
 | Uni2TS / Moirai | Universal Time Series Transformer 연구용 라이브러리로 Moirai 시리즈 및 Moirai MoE 모델을 대규모 pretrain·finetune·평가·/blog 링크로 소개 | [arXiv:2402.02592](https://arxiv.org/abs/2402.02592) | [SalesforceAIResearch/uni2ts](https://github.com/SalesforceAIResearch/uni2ts) | See [Salesforce Moirai Blog](https://www.salesforce.com/blog/moirai) |
+| Moirai 2.0 | decoder-only 구조와 multi-token prediction을 채택해 추론 속도와 정밀한 분위수 예측 성능을 개선한 universal forecasting 후속 모델 | [Moirai 2.0: Unified Training of Universal Time Series Forecasting Models](https://arxiv.org/abs/2511.11698) | - | Decoder-only / Quantile Forecasting |
 | TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
 | TempoPFN | 병렬화 가능한 형태로 설계된 Linear RNN 기반 단변량(univariate) 시계열용 파운데이션 모델 | [arXiv:2510.25502](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
 
@@ -89,8 +94,16 @@
 | Title | Description | Link |
 | --- | --- | --- |
 | arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
+| Dual-Forecaster: Integrating Textual and Numerical Data for Time Series Forecasting | 의미론적 텍스트 임베딩과 수치 시계열 패치를 동일 잠재 공간으로 매핑해 뉴스·텍스트 정보를 예측에 결합하는 멀티모달 예측 접근법 (ICLR 2025 Spotlight 추정) | - |
+| ChronoSteer: Steerable Time Series Forecasting via Instruction Tuning | 텍스트 instruction을 통해 수치 예측 방향을 조종하는 steerable forecasting 기법으로, 사건 설명을 예측 제약/유도 신호로 활용 | - |
 | Quo Vadis, Unsupervised Time Series Anomaly Detection? | 비지도 시계열 이상 탐지 연구의 평가 메트릭·벤치마킹 문제 분석하고 단순한 베이스라인 효과 입증 (ICML 2024 Position Paper) | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
 | Awesome Multivariate TS Anomaly Detection | 다변량 시계열 이상 탐지 논문을 연도·학회별로 정리한 읽기 리스트 | [GitHub](https://github.com/lzz19980125/awesome-multivariate-time-series-anomaly-detection-algorithms) |
+
+## Datasets & Benchmarks
+
+| Dataset / Benchmark | Description | Link |
+| --- | --- | --- |
+| FinMultiTime | 뉴스·테이블·차트 이미지·시계열 가격이 시간축 기준으로 정렬된 112.6GB 규모의 금융 멀티모달 시계열 데이터셋 | Repo 예정: [microsoft/TableProvider](https://github.com/microsoft/TableProvider) |
 
 ## Learning Resources
 
