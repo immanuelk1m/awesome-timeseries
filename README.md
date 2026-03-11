@@ -1,155 +1,145 @@
 # Awesome Time Series Forecast
 
-> 시계열 예측·분석 위한 **프레임워크, 에이전트, 라이브러리, 큐레이션 모음**. (실무 · 대회 · 연구 어디서든 바로 써먹을 링크 제공 목표.)
+Languages: **English** | [한국어](README.ko.md)
 
-`awesome-time-series` 레포 정리 스타일 참고해 큐레이션 재구성. 요청 따라 **모델 / 에이전트 / 학습자료 / 리더보드** 체계 사용.
+> A curated collection of frameworks, agents, libraries, papers, benchmarks, and learning resources for time series forecasting and analysis.
 
-## Contents
-- [Models - TS Forecast](#models---ts-forecast) 예측 모델
-- [Models - TS Anomaly Detection](#models---ts-anomaly-detection) 이상 탐지 모델
-- [Model - Foundation](#model---foundation)
-- [Agents](#agents) 항목
-- [Survey](#survey) 서베이 논문
-- [Papers](#papers) 논문
-- [Datasets & Benchmarks](#datasets--benchmarks) 데이터셋/벤치마크
-- [Learning Resources](#learning-resources) 참고용
-- [Utilities](#utilities) 도구
-- [Community](#community) 토론
-- [Related References](#related-references) 큐레이션
-- [Leaderboards](#leaderboards) 정리
+This repository reorganizes useful links for practitioners, competitors, and researchers into a cleaner English-first README, while keeping a separate Korean version.
 
-## Models - TS Forecast
+## Before You Start...
 
-| Model | Description | Paper | GitHub | 비고 |
-| --- | --- | --- | --- | --- |
-| Autoformer | Auto-Correlation 기반 자동 분해로 장기 예측 성능 높인 모델 | [arXiv:2106.13008](https://arxiv.org/abs/2106.13008) | [thuml/Autoformer](https://github.com/thuml/Autoformer) | Transformer |
-| FEDformer | Fourier/Wavelet 기반 주파수 분해로 장기 예측 효율 높인 모델 | [ICML 2022](https://proceedings.mlr.press/v162/zhou22g/zhou22g.pdf) | [MAZiqing/FEDformer](https://github.com/MAZiqing/FEDformer) | Transformer |
-| Informer | ProbSparse Attention으로 긴 시계열 효율적으로 모델링하는 구조 | [arXiv:2012.07436](https://arxiv.org/abs/2012.07436) | [zhouhaoyi/Informer2020](https://github.com/zhouhaoyi/Informer2020) | Transformer |
-| iTransformer | 변수를 토큰으로 다루는 Inverted Transformer로 다변량 상관관계 학습 | [arXiv:2310.06625](https://arxiv.org/abs/2310.06625) | [thuml/iTransformer](https://github.com/thuml/iTransformer) | Transformer |
-| Nonstationary Transformer | 시계열 정상화와 De-stationary Attention으로 비정상 데이터 안정화 | [arXiv:2205.14415](https://arxiv.org/abs/2205.14415) | [thuml/Nonstationary_Transformers](https://github.com/thuml/Nonstationary_Transformers) | Transformer |
-| Temporal Fusion Transformer (TFT) | 다중 지평선 예측에 적합한 주의 기반 아키텍처로 변수 중요도 해석 가능 | [arXiv:1912.09363](https://arxiv.org/abs/1912.09363) | [google-research/tft](https://github.com/google-research/google-research/tree/master/tft) | Transformer |
-| TimeXer | 외생 변수 예측을 위해 endogenous/exogenous 표현을 분리하고 global token으로 연결하는 Transformer 계열 모델 | [arXiv:2403.09898](https://arxiv.org/pdf/2403.09898) | [thuml/TimeXer](https://github.com/thuml/TimeXer) | Transformer / Exogenous Variables |
-| Probabilistic Carbon Price Transformer | mixed-frequency 정보와 Transformer 프레임워크를 결합해 탄소가격 분포를 사분위수 단위로 예측하는 확률 예측 모델 | [A novel probabilistic carbon price prediction model](https://www.sciencedirect.com/science/article/pii/S0306261925006816) | - | Transformer / Probabilistic |
-| Parallel Transformer-CNN | secondary decomposition 이후 Transformer와 CNN 분기를 병렬 결합해 원유 가격 시계열을 예측하는 하이브리드 구조 | [A “parallel” combined Transformer-CNN model](https://www.sciencedirect.com/science/article/abs/pii/S0957417425035833) | - | Transformer + CNN |
-| Temporal-Variable Fusion Transformer | temporal dependence와 variable correlation을 함께 융합해 단기·중기 전력가격 예측을 수행하는 Transformer 기반 모델 | [A Transformer-based model fusing temporal dependence and variable correlation](https://www.sciencedirect.com/science/article/abs/pii/S036054422504441X) | - | Transformer / Electricity Price |
-| HE-DTimeXer | 외생 변수 활용 short-term electricity price forecasting을 겨냥한 TimeXer 계열 전력가격 예측 모델 | [HE-DTimeXer](https://www.sciencedirect.com/science/article/abs/pii/S0378779625011277) | - | Transformer / Exogenous Variables |
-| TimesNet | 1D 시계열을 2D 텐서로 투영해 공간 패턴 학습하는 범용 모델 | [arXiv:2210.02186](https://arxiv.org/abs/2210.02186) | [thuml/TimesNet](https://github.com/thuml/TimesNet) | Transformer-like |
-| CMamba | Convolutional Selective SSM으로 다변량 시계열 장기 의존성 개선 | [arXiv:2406.05316](https://arxiv.org/pdf/2406.05316) | [zclzcl0223/CMamba](https://github.com/zclzcl0223/CMamba) | SSM (Mamba) |
-| Mamba | Selective State Space 모델로 선형 시간 복잡도로 긴 시퀀스 학습 | [arXiv:2312.00752](https://arxiv.org/abs/2312.00752) | [state-spaces/mamba](https://github.com/state-spaces/mamba) | SSM (Mamba) |
-| S-Mamba | Sparse gating과 다중 상태 공간 결합으로 시계열 전용 Mamba 변형 구성 | [arXiv:2403.11144](https://arxiv.org/abs/2403.11144v3) | [wzhwzhwzh0921/S-D-Mamba](https://github.com/wzhwzhwzh0921/S-D-Mamba) | SSM (Mamba) |
-| xLSTM-Mixer | xLSTM 블록과 Mixer 결합해 긴 시퀀스 정보 혼합 최적화 | [arXiv:2410.16928](https://arxiv.org/abs/2410.16928) | [mauricekraus/xlstm-mixer](https://github.com/mauricekraus/xlstm-mixer) | RNN + Mixer |
-| N-BEATS | Residual stack과 forward/backward 분해 활용한 MLP 기반 모델 | [arXiv:1905.10437](https://arxiv.org/abs/1905.10437) | [ServiceNow/N-BEATS](https://github.com/ServiceNow/N-BEATS) | MLP |
-| TimeMixer | Past/Future Mixing 블록 탑재한 MLP 기반 장·단기 예측 모델(TimeMixer++) | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
-| DUET | 시간·채널 듀얼 클러스터링으로 다변량 시계열 패턴 학습해 장기 예측 정확도 향상 (KDD 2025) | [arXiv:2412.10859](https://arxiv.org/abs/2412.10859) | [decisionintelligence/DUET](https://github.com/decisionintelligence/DUET) | Clustering |
-| DLinear | LTSF-Linear의 일부로, 분해 + 선형 회귀 활용해 Transformer 대비 강력한 예측 베이스라인 제공 | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear |
-| DeepEDM | 시계열 동역학 명시적으로 학습하는 DeepEDM 접근법 | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamics |
+Before you kick off a serious forecasting project, read [Forecast evaluation for data scientists: common pitfalls and best practices](https://pmc.ncbi.nlm.nih.gov/articles/PMC9718476/).
 
-## Models - TS Anomaly Detection
+It is one of the most practical papers to read first because it highlights where forecasting projects usually fail before model choice even matters: **data leakage**, **bad validation design**, **misleading error metrics**, and **ignoring strong naive / seasonal naive baselines**. If you have enough historical data, prefer **rolling-origin evaluation / time-series cross-validation**, choose metrics that match your business objective, and beat a solid baseline before reaching for a more complex model.
 
-| Model | Description | Paper | GitHub | 비고 |
-| --- | --- | --- | --- | --- |
-| Telemanom | LSTM과 비모수 동적 임계값으로 우주선 텔레메트리 이상 탐지 (NASA SMAP/Curiosity 데이터 활용) | [arXiv:1802.04431](https://arxiv.org/abs/1802.04431) | [khundman/telemanom](https://github.com/khundman/telemanom) | LSTM |
-| TranAD | Transformer 자기조건화와 adversarial 학습으로 다변량 시계열 이상 탐지 (VLDB 2022) | [VLDB](https://vldb.org/pvldb/vol15/p1201-tuli.pdf) | [imperial-qore/TranAD](https://github.com/imperial-qore/TranAD) | Transformer |
-| CATCH | 주파수 패칭과 채널 인식 메커니즘으로 다변량 시계열 이상 탐지 (ICLR 2025) | [arXiv:2410.12261](https://arxiv.org/abs/2410.12261) | [decisionintelligence/catch](https://github.com/decisionintelligence/catch) | Frequency Domain |
-| DualTF | 시간·주파수 이중 도메인 중첩 윈도우로 패턴 기반 이상치 탐지 정확도 향상 (TheWebConf 2024) | [ACM DL](https://dl.acm.org/doi/10.1145/3589334.3645556) | [kaist-dmlab/DualTF](https://github.com/kaist-dmlab/DualTF) | Dual-Domain |
-| TFMAE | Masked Autoencoder와 시간·주파수 마스킹으로 분포 변화에 강건한 이상 탐지 (ICDE 2024) | [Paper](https://github.com/LMissher/TFMAE/blob/main/paper/TFMAE.pdf) | [LMissher/TFMAE](https://github.com/LMissher/TFMAE) | Masked Autoencoder |
-| NPSR | Nominality Score 기반 듀얼 재구성으로 point·contextual 이상치 동시 탐지 (NeurIPS 2023) | [arXiv:2310.15416](https://arxiv.org/abs/2310.15416) | [andrewlai61616/NPSR](https://github.com/andrewlai61616/NPSR) | Performer |
-| DCdetector | 듀얼 브랜치 어텐션과 순수 대조 학습으로 이상치 판별 표현 학습 (KDD 2023) | [arXiv:2306.10347](https://arxiv.org/abs/2306.10347) | [DAMO-DI-ML/KDD2023-DCdetector](https://github.com/DAMO-DI-ML/KDD2023-DCdetector) | Contrastive Learning |
-| ModernTCN | 순수 컨볼루션 구조로 이상 탐지·예측·분류 등 5대 시계열 작업 범용 지원 (ICLR 2024 Spotlight) | [OpenReview](https://openreview.net/pdf?id=vpJMJerXHU) | [luodhhh/ModernTCN](https://github.com/luodhhh/ModernTCN) | CNN |
-| CARLA | 대조 학습 기반 자기지도 학습으로 레이블 없이 시계열 이상치 표현 학습 | [Pattern Recognition](https://www.sciencedirect.com/science/article/pii/S0031320324006253) | [zamanzadeh/CARLA](https://github.com/zamanzadeh/CARLA) | Contrastive Learning |
-| PatchAD | 대조 학습과 다중 스케일 패치 기반 경량 MLP-Mixer로 시계열 이상 탐지 | [arXiv:2401.09793](https://arxiv.org/abs/2401.09793) | [EmorZz1G/PatchAD](https://github.com/EmorZz1G/PatchAD) | MLP-Mixer |
+## Table of Contents
+- [Books](#books)
+- [Courses](#courses)
+- [Papers](#papers)
+- [Tutorials and talks](#tutorials-and-talks)
 
-## Model - Foundation
+## Books
 
-| Model | Description | Paper | GitHub | 비고 |
-| --- | --- | --- | --- | --- |
-| Chronos Forecasting | Amazon Science의 Chronos 시리즈(Chronos, Chronos-Bolt, Chronos-2)로 사전학습된 시계열 예측 모델을 zero-shot·패치 기반·covariate-aware 환경에서 인퍼런스만으로 제공 | [arXiv:2403.07815](https://arxiv.org/abs/2403.07815) | [amazon-science/chronos-forecasting](https://github.com/amazon-science/chronos-forecasting) | Pretrained Suite |
-| Chronos-2 | univariate에서 universal forecasting으로 확장한 후속 모델로, 그룹 어텐션 기반 in-context 학습을 통해 univariate·multivariate·covariate-informed 예측을 zero-shot으로 처리 | [Chronos-2: From Univariate to Universal Forecasting](https://arxiv.org/abs/2510.15821) | - | Universal ICL |
-| Time-MoE | 24억 파라미터 규모의 sparse Mixture-of-Experts 아키텍처를 사용하고 3,000억 개의 시계열 포인트(Time-300B)로 사전학습한 billion-scale foundation model | [Time-MoE: Billion-Scale Time Series Forecasting with Mixture-of-Experts](https://arxiv.org/abs/2409.16040) | - | MoE Foundation Model |
-| Sundial | 1조 개 이상의 데이터 포인트를 학습한 native time series foundation model로, 양자화 없이 연속 확률밀도함수를 직접 출력하는 distribution forecasting 지향 모델 | [Sundial: Native Time Series Foundation Model for Continuous Distribution Forecasting](https://arxiv.org/abs/2502.00816) | - | Continuous Distribution Forecasting |
-| TiRex | xLSTM와 in-context learning을 결합해 시계열 상태 추적(state-tracking) 능력을 강조한 forecasting 모델 | [TiRex: Time Series Forecasting with xLSTM and In-Context Learning](https://arxiv.org/abs/2505.23719) | - | xLSTM / ICL |
-| Toto | 관측지표(Observability) 중심의 시계열 대규모 예측용 Transformer로 BOOM Benchmark 기반 zero-shot/확률적 예측을 지원하며 2조 이상의 시계열 포인트로 사전학습된 decoder-only 아키텍처 | [arXiv:2505.14766](https://arxiv.org/abs/2505.14766) | [DataDog/toto](https://github.com/DataDog/toto) | Observability Suite |
-| Lag-Llama | probabilistic forecasting을 위해 context 길이/patch tuning과 RoPE 확장을 사용하는 최초 오픈소스 파운데이션 모델; zero-shot + finetuning 스크립트까지 공개 | [arXiv:2310.08278](https://arxiv.org/abs/2310.08278) | [time-series-foundation-models/lag-llama](https://github.com/time-series-foundation-models/lag-llama) | Zero-shot Probabilistic |
-| Uni2TS / Moirai | Universal Time Series Transformer 연구용 라이브러리로 Moirai 시리즈 및 Moirai MoE 모델을 대규모 pretrain·finetune·평가·/blog 링크로 소개 | [arXiv:2402.02592](https://arxiv.org/abs/2402.02592) | [SalesforceAIResearch/uni2ts](https://github.com/SalesforceAIResearch/uni2ts) | See [Salesforce Moirai Blog](https://www.salesforce.com/blog/moirai) |
-| Moirai 2.0 | decoder-only 구조와 multi-token prediction을 채택해 추론 속도와 정밀한 분위수 예측 성능을 개선한 universal forecasting 후속 모델 | [Moirai 2.0: Unified Training of Universal Time Series Forecasting Models](https://arxiv.org/abs/2511.11698) | - | Decoder-only / Quantile Forecasting |
-| TimesFM 2.5 200M | 다중 도메인 시계열용 파운데이션 Transformer 모델 | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
-| TempoPFN | 병렬화 가능한 형태로 설계된 Linear RNN 기반 단변량(univariate) 시계열용 파운데이션 모델 | [arXiv:2510.25502](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
-
-## Agents
-
-| Agent | Description | GitHub |
+| Resource | Description | Type |
 | --- | --- | --- |
-| DeepAnalyze | 데이터 중심 업무(EDA→전처리→모델링→리포트)를 에이전트형 LLM이 자율 처리하도록 설계 | [ruc-datalab/DeepAnalyze](https://github.com/ruc-datalab/DeepAnalyze) |
-| TimeCopilot | LLM과 Chronos/Moirai/TimesFM/TimeGPT 백엔드 결합해 예측·교차검증·이상탐지 자동화 | [AzulGarza/timecopilot](https://github.com/AzulGarza/timecopilot) |
+| [Forecasting: Principles and Practice (3rd ed.)](https://otexts.com/fpp3/intro.html) | Free online book covering forecasting fundamentals, statistical methods, and hands-on R workflows. | Book |
+| [Machine Learning Systems (Harvard)](https://www.mlsysbook.ai/) | A strong systems-oriented book for deploying and operating ML pipelines, useful when forecasting moves beyond notebooks. | Book |
+| [O'Reilly Learning Platform](https://learning.oreilly.com/home/) | Useful if you have institutional access and want a broad catalog of books on ML, statistics, data engineering, and forecasting. | Learning library |
 
-## Survey
+## Courses
 
-| Title | Description | Link |
+| Resource | Description | Format |
 | --- | --- | --- |
-| Foundation Models for Time Series Analysis: A Tutorial and Survey | 시계열 분석용 파운데이션 모델 튜토리얼·서베이로 모델 아키텍처, 사전 훈련 기법, 적응 방법, 데이터 모달리티를 방법론 기반 분류법으로 정리 (KDD 2024) | [arXiv:2403.14735](https://arxiv.org/abs/2403.14735) |
-| Deep Learning for Time Series Forecasting: A Survey | 딥러닝 기반 시계열 예측 서베이로 모델 아키텍처 일반 패러다임, 피처 추출 방법, 데이터셋을 체계적으로 정리 (IJMLC 2025) | [Springer](https://link.springer.com/article/10.1007/s13042-025-02560-w) |
+| [Time Series Forecasting](https://www.youtube.com/watch?v=uwKiT1o1TkI&list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE&index=1) | Practical step-by-step course playlist focused on time series forecasting workflows. | Video course |
+| [Microprediction](https://github.com/microprediction) | Challenge-driven environment for practicing real-time forecasting and probabilistic prediction. | Competition / hands-on learning |
+| [O'Reilly Learning Platform](https://learning.oreilly.com/home/) | Good for structured video courses and technical series if your EDU or company account includes access. | Course platform |
 
 ## Papers
 
+### Forecasting models
+
+| Model | Description | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| Autoformer | Uses Auto-Correlation and progressive decomposition for strong long-horizon forecasting. | [arXiv:2106.13008](https://arxiv.org/abs/2106.13008) | [thuml/Autoformer](https://github.com/thuml/Autoformer) | Transformer |
+| FEDformer | Frequency-enhanced decomposition with Fourier/Wavelet blocks for efficient long-term forecasting. | [ICML 2022](https://proceedings.mlr.press/v162/zhou22g/zhou22g.pdf) | [MAZiqing/FEDformer](https://github.com/MAZiqing/FEDformer) | Transformer |
+| Informer | Introduces ProbSparse attention for scalable long-sequence forecasting. | [arXiv:2012.07436](https://arxiv.org/abs/2012.07436) | [zhouhaoyi/Informer2020](https://github.com/zhouhaoyi/Informer2020) | Transformer |
+| iTransformer | Treats variables as tokens to model multivariate dependencies more directly. | [arXiv:2310.06625](https://arxiv.org/abs/2310.06625) | [thuml/iTransformer](https://github.com/thuml/iTransformer) | Transformer |
+| Nonstationary Transformer | Stabilizes non-stationary series with normalization and De-stationary Attention. | [arXiv:2205.14415](https://arxiv.org/abs/2205.14415) | [thuml/Nonstationary_Transformers](https://github.com/thuml/Nonstationary_Transformers) | Transformer |
+| Temporal Fusion Transformer (TFT) | Attention-based multi-horizon forecasting model with strong interpretability. | [arXiv:1912.09363](https://arxiv.org/abs/1912.09363) | [google-research/tft](https://github.com/google-research/google-research/tree/master/tft) | Transformer |
+| TimeXer | Separates endogenous and exogenous representations and links them with global tokens. | [arXiv:2403.09898](https://arxiv.org/pdf/2403.09898) | [thuml/TimeXer](https://github.com/thuml/TimeXer) | Transformer / exogenous variables |
+| Probabilistic Carbon Price Transformer | Combines mixed-frequency information with Transformer forecasting for carbon-price quantile prediction. | [Paper](https://www.sciencedirect.com/science/article/pii/S0306261925006816) | - | Probabilistic forecasting |
+| Parallel Transformer-CNN | Hybrid model that combines Transformer and CNN branches after secondary decomposition. | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0957417425035833) | - | Transformer + CNN |
+| Temporal-Variable Fusion Transformer | Fuses temporal dependence and variable correlation for electricity-price forecasting. | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S036054422504441X) | - | Energy forecasting |
+| HE-DTimeXer | TimeXer-style model for short-term electricity price forecasting with exogenous variables. | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0378779625011277) | - | Energy forecasting |
+| TimesNet | Projects 1D time series into 2D representations to learn richer temporal patterns. | [arXiv:2210.02186](https://arxiv.org/abs/2210.02186) | [thuml/TimesNet](https://github.com/thuml/TimesNet) | General-purpose TS model |
+| CMamba | Convolutional selective SSM for improved long-range multivariate time series modeling. | [arXiv:2406.05316](https://arxiv.org/pdf/2406.05316) | [zclzcl0223/CMamba](https://github.com/zclzcl0223/CMamba) | Mamba / SSM |
+| Mamba | Selective state space model with linear-time sequence modeling. | [arXiv:2312.00752](https://arxiv.org/abs/2312.00752) | [state-spaces/mamba](https://github.com/state-spaces/mamba) | Mamba / SSM |
+| S-Mamba | Sparse-gated multi-state-space variant tailored for time series. | [arXiv:2403.11144](https://arxiv.org/abs/2403.11144v3) | [wzhwzhwzh0921/S-D-Mamba](https://github.com/wzhwzhwzh0921/S-D-Mamba) | Mamba / SSM |
+| xLSTM-Mixer | Combines xLSTM blocks and Mixer-style token mixing for long-sequence forecasting. | [arXiv:2410.16928](https://arxiv.org/abs/2410.16928) | [mauricekraus/xlstm-mixer](https://github.com/mauricekraus/xlstm-mixer) | RNN + Mixer |
+| N-BEATS | Deep residual MLP architecture with backward/forward forecasting blocks. | [arXiv:1905.10437](https://arxiv.org/abs/1905.10437) | [ServiceNow/N-BEATS](https://github.com/ServiceNow/N-BEATS) | MLP |
+| TimeMixer | MLP-style architecture with past/future mixing blocks for long- and short-term forecasting. | [OpenReview](https://openreview.net/pdf?id=7oLshfEIC2) | [kwuking/TimeMixer](https://github.com/kwuking/TimeMixer) | MLP Mixer |
+| DUET | Dual clustering over time and variables for better long-horizon multivariate forecasting. | [arXiv:2412.10859](https://arxiv.org/abs/2412.10859) | [decisionintelligence/DUET](https://github.com/decisionintelligence/DUET) | Clustering |
+| DLinear | Strong decomposition + linear baseline from the LTSF-Linear family. | [arXiv:2205.13504](https://arxiv.org/abs/2205.13504) | [vivva/DLinear](https://github.com/vivva/DLinear) | Linear baseline |
+| DeepEDM | Learns time-series dynamics explicitly through a DeepEDM formulation. | [Project Page](https://abrarmajeedi.github.io/deep_edm/) | - | Dynamical systems |
+
+### Time-series anomaly detection
+
+| Model | Description | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| Telemanom | LSTM + nonparametric dynamic thresholds for telemetry anomaly detection. | [arXiv:1802.04431](https://arxiv.org/abs/1802.04431) | [khundman/telemanom](https://github.com/khundman/telemanom) | LSTM |
+| TranAD | Self-conditioning Transformer with adversarial learning for multivariate anomaly detection. | [VLDB](https://vldb.org/pvldb/vol15/p1201-tuli.pdf) | [imperial-qore/TranAD](https://github.com/imperial-qore/TranAD) | Transformer |
+| CATCH | Frequency patching and channel-aware modeling for multivariate anomaly detection. | [arXiv:2410.12261](https://arxiv.org/abs/2410.12261) | [decisionintelligence/catch](https://github.com/decisionintelligence/catch) | Frequency domain |
+| DualTF | Joint time/frequency-domain anomaly detection with overlapping windows. | [ACM DL](https://dl.acm.org/doi/10.1145/3589334.3645556) | [kaist-dmlab/DualTF](https://github.com/kaist-dmlab/DualTF) | Dual-domain |
+| TFMAE | Masked autoencoder with temporal and frequency masking for robust anomaly detection. | [Paper](https://github.com/LMissher/TFMAE/blob/main/paper/TFMAE.pdf) | [LMissher/TFMAE](https://github.com/LMissher/TFMAE) | Masked autoencoder |
+| NPSR | Dual reconstruction with nominality scores for point and contextual anomalies. | [arXiv:2310.15416](https://arxiv.org/abs/2310.15416) | [andrewlai61616/NPSR](https://github.com/andrewlai61616/NPSR) | Performer |
+| DCdetector | Dual-branch attention and contrastive learning for anomaly representation learning. | [arXiv:2306.10347](https://arxiv.org/abs/2306.10347) | [DAMO-DI-ML/KDD2023-DCdetector](https://github.com/DAMO-DI-ML/KDD2023-DCdetector) | Contrastive learning |
+| ModernTCN | Pure convolutional architecture that also supports forecasting, classification, and anomaly detection. | [OpenReview](https://openreview.net/pdf?id=vpJMJerXHU) | [luodhhh/ModernTCN](https://github.com/luodhhh/ModernTCN) | CNN |
+| CARLA | Contrastive self-supervised anomaly representation learning without labels. | [Pattern Recognition](https://www.sciencedirect.com/science/article/pii/S0031320324006253) | [zamanzadeh/CARLA](https://github.com/zamanzadeh/CARLA) | Contrastive learning |
+| PatchAD | Lightweight multi-scale patch-based MLP-Mixer for anomaly detection. | [arXiv:2401.09793](https://arxiv.org/abs/2401.09793) | [EmorZz1G/PatchAD](https://github.com/EmorZz1G/PatchAD) | MLP-Mixer |
+
+### Foundation models
+
+| Model | Description | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| Chronos Forecasting | Amazon Science pretrained forecasting family for zero-shot, patch-based, and covariate-aware inference. | [arXiv:2403.07815](https://arxiv.org/abs/2403.07815) | [amazon-science/chronos-forecasting](https://github.com/amazon-science/chronos-forecasting) | Pretrained suite |
+| Chronos-2 | Extends Chronos toward universal forecasting with grouped attention and in-context learning. | [arXiv:2510.15821](https://arxiv.org/abs/2510.15821) | - | Universal ICL |
+| Time-MoE | Billion-scale sparse Mixture-of-Experts time series foundation model trained on Time-300B. | [arXiv:2409.16040](https://arxiv.org/abs/2409.16040) | - | MoE foundation model |
+| Sundial | Native time-series foundation model for continuous distribution forecasting. | [arXiv:2502.00816](https://arxiv.org/abs/2502.00816) | - | Distribution forecasting |
+| TiRex | xLSTM + in-context learning approach for forecasting with strong state tracking. | [arXiv:2505.23719](https://arxiv.org/abs/2505.23719) | - | xLSTM / ICL |
+| Toto | Decoder-only observability-focused foundation model trained on large-scale time series. | [arXiv:2505.14766](https://arxiv.org/abs/2505.14766) | [DataDog/toto](https://github.com/DataDog/toto) | Observability suite |
+| Lag-Llama | Open-source probabilistic foundation model with zero-shot and fine-tuning support. | [arXiv:2310.08278](https://arxiv.org/abs/2310.08278) | [time-series-foundation-models/lag-llama](https://github.com/time-series-foundation-models/lag-llama) | Probabilistic |
+| Uni2TS / Moirai | Universal Time Series Transformer ecosystem including Moirai and Moirai MoE. | [arXiv:2402.02592](https://arxiv.org/abs/2402.02592) | [SalesforceAIResearch/uni2ts](https://github.com/SalesforceAIResearch/uni2ts) | See [Salesforce Moirai Blog](https://www.salesforce.com/blog/moirai) |
+| Moirai 2.0 | Decoder-only follow-up with multi-token prediction for faster and more precise quantile forecasts. | [arXiv:2511.11698](https://arxiv.org/abs/2511.11698) | - | Quantile forecasting |
+| TimesFM 2.5 200M | General-purpose foundation Transformer for multi-domain forecasting. | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
+| TempoPFN | Parallelizable Linear-RNN-style foundation model for univariate forecasting. | [arXiv:2510.25502](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
+
+### Surveys and selected papers
+
 | Title | Description | Link |
 | --- | --- | --- |
-| arXiv:2510.02729 | 최신 시계열 관련 프리프린트 (세부 내용은 원문 참고) | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
-| Dual-Forecaster: Integrating Textual and Numerical Data for Time Series Forecasting | 의미론적 텍스트 임베딩과 수치 시계열 패치를 동일 잠재 공간으로 매핑해 뉴스·텍스트 정보를 예측에 결합하는 멀티모달 예측 접근법 (ICLR 2025 Spotlight 추정) | - |
-| ChronoSteer: Steerable Time Series Forecasting via Instruction Tuning | 텍스트 instruction을 통해 수치 예측 방향을 조종하는 steerable forecasting 기법으로, 사건 설명을 예측 제약/유도 신호로 활용 | - |
-| Quo Vadis, Unsupervised Time Series Anomaly Detection? | 비지도 시계열 이상 탐지 연구의 평가 메트릭·벤치마킹 문제 분석하고 단순한 베이스라인 효과 입증 (ICML 2024 Position Paper) | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
-| Awesome Multivariate TS Anomaly Detection | 다변량 시계열 이상 탐지 논문을 연도·학회별로 정리한 읽기 리스트 | [GitHub](https://github.com/lzz19980125/awesome-multivariate-time-series-anomaly-detection-algorithms) |
+| Foundation Models for Time Series Analysis: A Tutorial and Survey | Tutorial survey that organizes time-series foundation models by architecture, pretraining strategy, adaptation method, and modality. | [arXiv:2403.14735](https://arxiv.org/abs/2403.14735) |
+| Deep Learning for Time Series Forecasting: A Survey | Broad survey of deep learning forecasting architectures, feature extraction methods, and datasets. | [Springer](https://link.springer.com/article/10.1007/s13042-025-02560-w) |
+| Dual-Forecaster: Integrating Textual and Numerical Data for Time Series Forecasting | Multimodal forecasting approach that aligns textual and numerical representations in a shared latent space. | - |
+| ChronoSteer: Steerable Time Series Forecasting via Instruction Tuning | Uses textual instructions to steer numerical forecasting behavior. | - |
+| Quo Vadis, Unsupervised Time Series Anomaly Detection? | Critiques evaluation protocols in unsupervised anomaly detection and demonstrates the power of simpler baselines. | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
+| arXiv:2510.02729 | Recent time-series preprint; see the paper for details. | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
 
-## Datasets & Benchmarks
+### Datasets, benchmarks, and agent-style research systems
 
-| Dataset / Benchmark | Description | Link |
+| Resource | Description | Link |
 | --- | --- | --- |
-| FinMultiTime | 뉴스·테이블·차트 이미지·시계열 가격이 시간축 기준으로 정렬된 112.6GB 규모의 금융 멀티모달 시계열 데이터셋 | Repo 예정: [microsoft/TableProvider](https://github.com/microsoft/TableProvider) |
+| FinMultiTime | 112.6 GB financial multimodal dataset aligning news, tables, chart images, and price time series along the time axis. | Repo planned via [microsoft/TableProvider](https://github.com/microsoft/TableProvider) |
+| DeepAnalyze | Research agent designed to autonomously handle data-centric workflows from EDA to reporting. | [ruc-datalab/DeepAnalyze](https://github.com/ruc-datalab/DeepAnalyze) |
+| TimeCopilot | LLM-based forecasting/anomaly-detection agent built around Chronos, Moirai, TimesFM, and TimeGPT backends. | [AzulGarza/timecopilot](https://github.com/AzulGarza/timecopilot) |
+| Forecasting Experts' Verdict (FEV) | AutoGluon leaderboard for comparing forecasting performance across datasets. | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
+| GIFT Evaluation Leaderboard | Salesforce benchmark leaderboard and evaluation pipeline for global forecasting. | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
+| TAB | Time-series anomaly detection leaderboard related to CATCH. | [GitHub](https://github.com/decisionintelligence/TAB) |
 
-## Learning Resources
+## Tutorials and talks
 
-| Resource | Description | Link Type |
+### Tutorials, libraries, and frameworks
+
+| Resource | Description | Link |
 | --- | --- | --- |
-| Time Series Forecasting | 시계열 예측 단계별로 다루는 실습 중심 강의 시리즈 | [YouTube](https://www.youtube.com/watch?v=uwKiT1o1TkI&list=PLyCNZ_xXGzpm7W9jLqbIyBAiSO5jDwJeE&index=1) |
-| Forecasting: Principles and Practice (3rd ed.) | 통계 기반 시계열 분석 이론과 R 실습 제공하는 무료 온라인 교재 | [Book](https://otexts.com/fpp3/intro.html) |
-| Microprediction | 실시간 예측 경진대회와 오픈소스 생태계로 다양한 챌린지 경험 가능 | [GitHub](https://github.com/microprediction) |
-| Time-Series-Library (TSLib) | 예측·대체·분류·이상탐지 등 5대 작업 재현성 있게 지원하는 실험 프레임워크 | [GitHub](https://github.com/thuml/Time-Series-Library) |
-| Machine Learning Systems (Harvard) | 하버드대가 무료로 공개한 머신러닝 시스템 설계·운영 교재 | [Book](https://www.mlsysbook.ai/) |
-| O'Reilly Learning Platform | EDU 계정 있으면 다양한 머신러닝·데이터 과학 전자책 무료로 열람 가능 | [Learning Portal](https://learning.oreilly.com/home/) |
+| [Time-Series-Library (TSLib)](https://github.com/thuml/Time-Series-Library) | Reproducible experiment framework spanning forecasting, imputation, classification, and anomaly detection. |
+| [PyTorch Forecasting](https://github.com/sktime/pytorch-forecasting) | PyTorch Lightning-based library that integrates multiple deep forecasting models. |
+| [Kats](https://github.com/facebookresearch/Kats) | Lightweight framework for forecasting, anomaly detection, and feature extraction. |
+| [Orion](https://github.com/sintel-dev/Orion) | Unsupervised machine learning pipeline library for time-series anomaly detection. |
+| [Alibi Detect](https://github.com/SeldonIO/alibi-detect) | Toolkit for anomaly, outlier, drift, and adversarial detection across modalities including time series. |
+| [River](https://github.com/online-ml/river) | Online machine learning library for streaming data and concept drift scenarios. |
+| [Darts](https://github.com/unit8co/darts) | Unified forecasting/anomaly-detection interface with both statistical and deep models. |
+| [Prophet](https://github.com/facebook/prophet) | Widely used business forecasting library with trend, seasonality, and holiday components. |
+| [data-science-template](https://github.com/CodeCutTech/data-science-template) | Reproducible project template for data-science and forecasting workflows. |
 
-## Utilities
+### Discussions and reference lists
 
-| Utility | Description | GitHub |
+| Resource | Description | Link |
 | --- | --- | --- |
-| PyTorch Forecasting | PyTorch Lightning 기반 시계열 예측 라이브러리로 다양한 딥러닝 모델 통합 제공 | [sktime/pytorch-forecasting](https://github.com/sktime/pytorch-forecasting) |
-| data-science-template | 데이터 사이언스 프로젝트를 표준 구조로 정의해 재현성과 유지보수성을 높이는 템플릿 | [CodeCutTech/data-science-template](https://github.com/CodeCutTech/data-science-template) |
-| Kats | 시계열 분석·예측·이상 탐지·특징 추출을 경량 확장 가능한 프레임워크로 제공 (Facebook Research) | [facebookresearch/Kats](https://github.com/facebookresearch/Kats) |
-| Orion | 비지도 학습 기반 시계열 이상 탐지용 머신러닝 파이프라인 라이브러리 | [sintel-dev/Orion](https://github.com/sintel-dev/Orion) |
-| Alibi Detect | 시계열·이미지·텍스트 등 다양한 데이터에서 이상치·드리프트·적대적 예제 탐지 라이브러리 | [SeldonIO/alibi-detect](https://github.com/SeldonIO/alibi-detect) |
-| River | 스트리밍 데이터 온라인 학습용 머신러닝 라이브러리로 Concept Drift 대응 가능 | [online-ml/river](https://github.com/online-ml/river) |
-| Darts | 통계 모델과 딥러닝 방법을 scikit-learn 스타일 통합 인터페이스로 제공하는 시계열 예측·이상 탐지 라이브러리 | [unit8co/darts](https://github.com/unit8co/darts) |
-| Prophet | 비즈니스 시계열 예측 전용 라이브러리로 계절성·트렌드·휴일 효과 자동 처리 지원 (Facebook Core Data Science) | [facebook/prophet](https://github.com/facebook/prophet) |
-
-## Community
-
-| Topic | Description | Link |
-| --- | --- | --- |
-| Why Mamba did not catch on? | Mamba 계열 모델 채택과 한계에 대한 커뮤니티 토론 | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1hpg91o/d_why_mamba_did_not_catch_on/) |
-| Most Time Series Anomaly Detection results are meaningless | 시계열 이상 탐지 결과의 의미와 평가 방법론에 대한 토론 | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1gmwxnr/r_most_time_series_anomaly_detection_results_are/) |
-
-## Related References
-
-| Repository | Description | Link |
-| --- | --- | --- |
-| awesome-time-series | 시계열 관련 패키지·논문·학습 자료 폭넓게 모은 Awesome 리스트라 도구 지형 조사에 유용 | [GitHub](https://github.com/lmmentel/awesome-time-series) |
-| awesome-time-series (cuge1995) | 연구 논문과 벤치마크, 응용 사례 중심으로 최신 학술 동향 정리한 큐레이션 | [GitHub](https://github.com/cuge1995/awesome-time-series) |
-| awesome-industrial-anomaly-detection | 산업 현장 이상탐지 관련 논문·데이터셋·방법론 모은 큐레이션 | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
-| ts-anomaly-benchmark | 딥러닝 기반 시계열 이상 탐지 방법론·데이터셋·평가 메트릭 모은 벤치마크 (Monash/Griffith/IBM) | [GitHub](https://github.com/zamanzadeh/ts-anomaly-benchmark) |
-| awesome-TS-anomaly-detection | 시계열 이상 탐지를 위한 도구·데이터셋 모은 종합 카탈로그 | [GitHub](https://github.com/rob-med/awesome-TS-anomaly-detection) |
-
-## Leaderboards
-
-| Leaderboard | Focus | Link |
-| --- | --- | --- |
-| Forecasting Experts' Verdict (FEV) | AutoGluon 팀이 운영하는 시계열 예측 리더보드로 다양한 데이터셋 성능 비교 가능 | [Hugging Face Space](https://huggingface.co/spaces/autogluon/fev-leaderboard) |
-| GIFT Evaluation Leaderboard | Salesforce 글로벌 시계열 벤치마크 GIFT 평가 결과와 파이프라인 제공 | [Hugging Face Space](https://huggingface.co/spaces/Salesforce/GIFT-Eval) |
-| TAB | 시계열 이상치 탐지 리더보드 (CATCH) | [Github](https://github.com/decisionintelligence/TAB) |
+| Why Mamba did not catch on? | Community discussion on the adoption limits of Mamba-style sequence models. | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1hpg91o/d_why_mamba_did_not_catch_on/) |
+| Most Time Series Anomaly Detection results are meaningless | Discussion around evaluation quality and meaning in anomaly detection research. | [Reddit Thread](https://www.reddit.com/r/MachineLearning/comments/1gmwxnr/r_most_time_series_anomaly_detection_results_are/) |
+| awesome-time-series | Broad awesome-list for packages, papers, and learning resources across time-series topics. | [GitHub](https://github.com/lmmentel/awesome-time-series) |
+| awesome-time-series (cuge1995) | Curated list focused on papers, benchmarks, and current research trends. | [GitHub](https://github.com/cuge1995/awesome-time-series) |
+| awesome-industrial-anomaly-detection | Curated list of industrial anomaly detection papers, datasets, and methods. | [GitHub](https://github.com/M-3LAB/awesome-industrial-anomaly-detection) |
+| ts-anomaly-benchmark | Benchmark repository covering datasets, methods, and metrics for deep anomaly detection. | [GitHub](https://github.com/zamanzadeh/ts-anomaly-benchmark) |
+| awesome-TS-anomaly-detection | Comprehensive catalog of time-series anomaly detection tools and datasets. | [GitHub](https://github.com/rob-med/awesome-TS-anomaly-detection) |
+| Awesome Multivariate TS Anomaly Detection | Reading list for multivariate anomaly detection papers by year and venue. | [GitHub](https://github.com/lzz19980125/awesome-multivariate-time-series-anomaly-detection-algorithms) |
