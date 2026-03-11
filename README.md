@@ -121,6 +121,7 @@ It is one of the most practical papers to read first because it highlights where
 
 | Resource | Description | Link |
 | --- | --- | --- |
+| ⭐ Forecasting for Data Scientists (FFDS) | Playlist focused on practical forecasting topics for data scientists. | [YouTube Playlist](https://www.youtube.com/playlist?list=PLSpAVARuzDa2KlLPVynFc5uBZ0U_cXF6X) |
 | [Time-Series-Library (TSLib)](https://github.com/thuml/Time-Series-Library) | Reproducible experiment framework spanning forecasting, imputation, classification, and anomaly detection. |
 | [PyTorch Forecasting](https://github.com/sktime/pytorch-forecasting) | PyTorch Lightning-based library that integrates multiple deep forecasting models. |
 | [Kats](https://github.com/facebookresearch/Kats) | Lightweight framework for forecasting, anomaly detection, and feature extraction. |

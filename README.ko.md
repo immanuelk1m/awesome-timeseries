@@ -121,6 +121,7 @@
 
 | 자료 | 설명 | 링크 |
 | --- | --- | --- |
+| ⭐ Forecasting for Data Scientists (FFDS) | 데이터 사이언티스트를 위한 실전 예측 주제를 다루는 플레이리스트입니다. | [YouTube Playlist](https://www.youtube.com/playlist?list=PLSpAVARuzDa2KlLPVynFc5uBZ0U_cXF6X) |
 | [Time-Series-Library (TSLib)](https://github.com/thuml/Time-Series-Library) | 예측, 결측치 대체, 분류, 이상 탐지까지 아우르는 재현성 높은 실험 프레임워크입니다. |
 | [PyTorch Forecasting](https://github.com/sktime/pytorch-forecasting) | 여러 딥러닝 예측 모델을 통합한 PyTorch Lightning 기반 라이브러리입니다. |
 | [Kats](https://github.com/facebookresearch/Kats) | 예측, 이상 탐지, 특징 추출을 지원하는 경량 프레임워크입니다. |
