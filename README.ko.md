@@ -99,6 +99,8 @@
 | --- | --- | --- |
 | Foundation Models for Time Series Analysis: A Tutorial and Survey | 아키텍처, 사전학습 전략, 적응 방식, 모달리티 기준으로 foundation model을 정리한 튜토리얼 서베이 | [arXiv:2403.14735](https://arxiv.org/abs/2403.14735) |
 | Deep Learning for Time Series Forecasting: A Survey | 딥러닝 기반 예측 구조, 특징 추출 방식, 데이터셋을 폭넓게 다루는 서베이 | [Springer](https://link.springer.com/article/10.1007/s13042-025-02560-w) |
+| Learning in Nonstationary Environments: A Survey | 비정상성·드리프트 환경에서의 머신러닝을 다루는 서베이, 데이터 스트림·변화하는 분포·적응형 학습 전략 중심 | [IEEE / ACM DL](https://dl.acm.org/doi/abs/10.1109/MCI.2015.2471196?utm_source=chatgpt.com) |
+| How to Avoid Data Leakage When Performing Data Preparation | 전처리 단계의 데이터 누수 방지 방법을 다루는 실무형 아티클, train/test split과 cross-validation 예제 포함 | [Machine Learning Mastery](https://machinelearningmastery.com/data-preparation-without-data-leakage/?utm_source=chatgpt.com) |
 | Dual-Forecaster: Integrating Textual and Numerical Data for Time Series Forecasting | 1차 출처 논문/저장소 링크 확인 전까지 세부 방법 설명 보류가 필요한 미검증 항목 | - |
 | ChronoSteer: Steerable Time Series Forecasting via Instruction Tuning | 1차 출처 논문/저장소 링크 확인 전까지 세부 방법 설명 보류가 필요한 미검증 항목 | - |
 | Quo Vadis, Unsupervised Time Series Anomaly Detection? | 비지도 이상 탐지 평가 프로토콜 비판과 단순 베이스라인 강점 제시 | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
