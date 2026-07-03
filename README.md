@@ -93,6 +93,15 @@ It is one of the most practical papers to read first because it highlights where
 | TimesFM 2.5 200M | General-purpose foundation Transformer for multi-domain forecasting. | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
 | TempoPFN | Parallelizable Linear-RNN-style foundation model for univariate forecasting. | [arXiv:2510.25502](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
 
+### LLM + TSFM hybrid systems
+
+| Release date | Paper | Architecture | Paper link | GitHub / Code |
+| --- | --- | --- | --- | --- |
+| 2026-05-28 | **KairosAgent** | **LLM reasoner + TSFM forecaster** | [arXiv](https://arxiv.org/abs/2605.30002) | Official GitHub unconfirmed / [Project Page](https://foundation-model-research.github.io/KairosAgent/) |
+| 2026-05-28 | **PostTime** | **LLM revisor + TimesFM prior** | [arXiv](https://arxiv.org/abs/2605.29401) | Public code unconfirmed |
+| 2025-08-29 | **CALM** | **TimesFM + LLM-as-a-Judge** | [arXiv](https://arxiv.org/abs/2508.21273) | Public code unconfirmed |
+| 2025-05-15 | **ChronoSteer** | **LLM interprets text events → revises TSFM forecast** | [arXiv](https://arxiv.org/abs/2505.10083) | Public code unconfirmed |
+
 ### Surveys and selected papers
 
 | Title | Description | Link |
@@ -102,7 +111,6 @@ It is one of the most practical papers to read first because it highlights where
 | Learning in Nonstationary Environments: A Survey | Survey of machine learning in nonstationary or drifting environments, focusing on data streams, evolving distributions, and adaptive learning strategies. | [IEEE / ACM DL](https://dl.acm.org/doi/abs/10.1109/MCI.2015.2471196?utm_source=chatgpt.com) |
 | How to Avoid Data Leakage When Performing Data Preparation | Practical article on preventing data leakage during preprocessing, with train/test split and cross-validation examples. | [Machine Learning Mastery](https://machinelearningmastery.com/data-preparation-without-data-leakage/?utm_source=chatgpt.com) |
 | Dual-Forecaster: Integrating Textual and Numerical Data for Time Series Forecasting | Unverified entry — add a primary paper or repository link before describing its method in detail. | - |
-| ChronoSteer: Steerable Time Series Forecasting via Instruction Tuning | Unverified entry — add a primary paper or repository link before describing its method in detail. | - |
 | Quo Vadis, Unsupervised Time Series Anomaly Detection? | Critiques evaluation protocols in unsupervised anomaly detection and demonstrates the power of simpler baselines. | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
 | arXiv:2510.02729 | Recent time-series preprint; see the paper for details. | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
 

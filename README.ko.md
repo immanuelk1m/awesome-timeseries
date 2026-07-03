@@ -93,6 +93,15 @@
 | TimesFM 2.5 200M | 다양한 도메인에 적용 가능한 범용 시계열 파운데이션 Transformer | [arXiv:2310.10688](https://arxiv.org/abs/2310.10688) | [google-research/timesfm](https://github.com/google-research/timesfm) | Foundation Transformer |
 | TempoPFN | 병렬화 가능한 Linear-RNN 스타일의 단변량 예측 파운데이션 모델 | [arXiv:2510.25502](https://arxiv.org/pdf/2510.25502) | [automl/TempoPFN](https://github.com/automl/TempoPFN) | Foundation RNN |
 
+### LLM + TSFM hybrid systems
+
+| 공개일 | 논문 | 구조 | 논문 링크 | GitHub / 코드 |
+| --- | --- | --- | --- | --- |
+| 2026-05-28 | **KairosAgent** | **LLM reasoner + TSFM forecaster** | [arXiv](https://arxiv.org/abs/2605.30002) | 공식 GitHub 미확인 / [Project Page](https://foundation-model-research.github.io/KairosAgent/) |
+| 2026-05-28 | **PostTime** | **LLM revisor + TimesFM prior** | [arXiv](https://arxiv.org/abs/2605.29401) | 공개 코드 미확인 |
+| 2025-08-29 | **CALM** | **TimesFM + LLM-as-a-Judge** | [arXiv](https://arxiv.org/abs/2508.21273) | 공개 코드 미확인 |
+| 2025-05-15 | **ChronoSteer** | **LLM이 텍스트 이벤트를 해석 → TSFM forecast 수정** | [arXiv](https://arxiv.org/abs/2505.10083) | 공개 코드 미확인 |
+
 ### Surveys and selected papers
 
 | 제목 | 설명 | 링크 |
@@ -102,7 +111,6 @@
 | Learning in Nonstationary Environments: A Survey | 비정상성·드리프트 환경에서의 머신러닝을 다루는 서베이, 데이터 스트림·변화하는 분포·적응형 학습 전략 중심 | [IEEE / ACM DL](https://dl.acm.org/doi/abs/10.1109/MCI.2015.2471196?utm_source=chatgpt.com) |
 | How to Avoid Data Leakage When Performing Data Preparation | 전처리 단계의 데이터 누수 방지 방법을 다루는 실무형 아티클, train/test split과 cross-validation 예제 포함 | [Machine Learning Mastery](https://machinelearningmastery.com/data-preparation-without-data-leakage/?utm_source=chatgpt.com) |
 | Dual-Forecaster: Integrating Textual and Numerical Data for Time Series Forecasting | 1차 출처 논문/저장소 링크 확인 전까지 세부 방법 설명 보류가 필요한 미검증 항목 | - |
-| ChronoSteer: Steerable Time Series Forecasting via Instruction Tuning | 1차 출처 논문/저장소 링크 확인 전까지 세부 방법 설명 보류가 필요한 미검증 항목 | - |
 | Quo Vadis, Unsupervised Time Series Anomaly Detection? | 비지도 이상 탐지 평가 프로토콜 비판과 단순 베이스라인 강점 제시 | [GitHub](https://github.com/ssarfraz/QuoVadisTAD) |
 | arXiv:2510.02729 | 최신 시계열 프리프린트, 자세한 내용은 원문 참고 | [arXiv:2510.02729](https://arxiv.org/pdf/2510.02729) |
 
